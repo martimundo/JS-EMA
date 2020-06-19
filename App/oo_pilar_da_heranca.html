@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+        //Princios de herança em JS
+
+
+        class Animal{
+            constructor(){
+                this.tamanho = null
+                this.cor = ''
+            }
+            dormir(){
+                console.log('Dormir')
+            }
+        }
+        //Para se trabalhar com herança utilizamos a palavra reservada extends
+        class Cachorro extends Animal{
+            constructor(){ 
+                super()               
+                this.orelhas = 'Medias e caidas'
+            }
+            correr(){
+                console.log('Correr')
+            }
+            
+            rosnar(){
+                console.log('Rosnar')
+            }
+        }
+
+        class Passaro extends Animal{
+            constructor(){   
+                super()             
+                this.bico = 'Pequeno'
+            }
+
+            voar(){
+                console.log('Voar')
+            }   
+            
+        }
+
+        //Nesta classe ele esta herdando da classe Passaro que herda da classe animal
+        //Esta ocorrendo o efeito cascata
+        class Papagaio extends Passaro{
+            constructor(){
+                super()
+                this.sabeFalar = true
+            }
+            falar(){
+                console.log('Dá o Pé Loro')
+            }
+        }
+        let cachorro = new Cachorro()
+        let passaro = new Passaro()
+        let papagaio = new Papagaio()
+
+        cachorro.dormir()
+        passaro.dormir()
+        papagaio.falar()
+        papagaio.voar()
+       
+
+
+    </script>
+    <title>Projeto ECMA Abstracao</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+        //uma class representa uma entidade ou objeto exemplo ContaBancaria
+        class ContaBancaria{
+            //agencia//numeroConta//saldo//limite
+            //criando os atributos da classe
+            constructor(){
+                this.agencia = 319
+                this.numeroConta = 10541555
+                this.saldo = 100
+                this.limite = 2000
+            }
+            //Para criar os metodos ou funções não é necessário utilizar a palavra reservada function
+            //por conta de uma particularidade do ECMA6
+
+            depositar(vlDeposito){
+                this.saldo += vlDeposito
+            }
+            sacar(vlSaque){
+                this.saldo -= vlSaque
+            }
+            consultaSaldo(){
+                return this.saldo
+            }
+
+        }  
+        //Instanciar uma classe em JavaScript
+        let conta = new ContaBancaria()
+        let conta1 = new ContaBancaria() 
+
+        //Para acessar atributos e metodos utilizamos a notação ".(ponto)"
+        console.log(conta.consultaSaldo()) 
+        //Passagem de parametro para o metodo depositar
+        conta.depositar(5000)
+        console.log(conta.consultaSaldo())
+
+        //realizar saque da conta
+        conta.sacar(5000)
+        console.log('O saldo da Conta ' + conta.numeroConta + ' é de R$ ' + conta.consultaSaldo())
+       
+       
+       
+    </script>
+    <title>Projeto ECMA Abstracao</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

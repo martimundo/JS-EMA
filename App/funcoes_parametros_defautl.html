@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+
+       //funções com parametros default
+
+       function contarHistoria(personagem = 'Toto', atividade = 'Latir', nome = 'Marcos'){
+
+           document.write(`Era uma vez um cachorro chamado ${personagem}, ele adorava ${atividade} , seu dono era o ${nome} e eles eram felizes`);
+       }
+       contarHistoria(undefined,'miar','Adriana')
+       
+    </script>
+    <title>Projeto ECMA</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

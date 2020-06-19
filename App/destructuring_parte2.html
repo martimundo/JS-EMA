@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+
+        //destructuring ->
+        // é um operador de desestruturação onde retira valores de dentro de uma strutura
+        let produto = {
+            descricao: 'Notebook ',
+            preco: 1800,
+            detalhe:{
+                fabricante: 'Samsung',
+                modelo: 'A390-50'
+            }
+        }
+        //token
+        //array => []
+        //objetos => {}
+
+        //let {descricao, preco} = produto
+        let {descricao: d, preco: p} = produto
+        let {detalhe: {fabricante: f, modelo: m}} = produto
+        document.write(d, p)
+        document.write(f, m)
+
+        console.log(d, p)
+
+    </script>
+    <title>Projeto ECMA Objetos Literais</title>
+</head>
+<body>
+    
+</body>
+</html>

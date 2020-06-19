@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+        
+        //Funções factory
+
+        let Bicicleta1 = {
+            cor: "Vermelha",
+            marcha: 'Unica',
+            aro: 12,
+
+            pedalar(){console.log('Metodo Pedalar executado')}
+        }
+
+        let Bicicleta2 = {
+            cor: "Preta",
+            marcha:"18",
+            aro: 26,
+            pedalar(){console.log('Metodo Pedalar executado')}
+
+        }
+
+        let BicicletaFactory = function(cor, marcha, aro){
+            return{
+                cor: cor,
+                marcha: marcha,
+                aro: aro,
+                pedalar(){console.log('Metodo Pedalar executado')}
+            }
+        }
+
+        let Bicicleta3 = BicicletaFactory('Azul','Unica',22)
+        console.log(Bicicleta3)
+        console.log(Bicicleta1)
+        console.log(Bicicleta2)
+           
+    </script>
+    <title>Projeto ECMA Objetos Literais</title>
+</head>
+<body>
+    
+</body>
+</html>

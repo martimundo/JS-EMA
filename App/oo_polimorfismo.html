@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+        //Princios de herança em JS
+
+
+        class Animal{
+            constructor(tamanho, cor, peso){
+                this.tamanho = tamanho
+                this.cor = cor
+                this.peso = peso
+            }
+            dormir(){
+                console.log('Dormir')
+            }
+        }        
+        class Passaro extends Animal{
+            //passagem de parametros pelo constructor
+            constructor(bico, tamanho, cor, peso){   
+                super(tamanho,cor, peso)             
+                this.bico = bico                
+            }
+            voar(){
+                console.log('Voar')
+            }               
+        }
+
+        //Nesta classe ele esta herdando da classe Passaro que herda da classe animal
+        //Esta ocorrendo o efeito cascata
+        class Papagaio extends Passaro{
+            constructor(sabeFalar, tamanho, cor, peso){
+                super("Médio",tamanho, cor, peso)
+                this.sabeFalar = sabeFalar
+            }
+            falar(){
+                console.log('Dá o Pé Loro')
+            }
+        }
+
+        class Avestruz extends Passaro{
+
+            constructor(){
+                super("Grande", 250, 'Preto e Bracno', 15000)
+            }
+            enterrarCabeça(){
+                console.log('Enterrar a Cabeça')
+            }
+
+            //esse metodo sobrescreve o metro herdado da classe pai(Passaro)
+            voar(){
+                console.log('Avestruz não sabe voar')
+            }
+        }
+        
+        let papagaio = new Papagaio(true, 10, 'Verde',50)
+        console.log(papagaio)
+        papagaio.voar()  
+
+        let avestruz = new Avestruz()
+        console.log(avestruz)  
+        avestruz.enterrarCabeça()  
+        avestruz.voar() 
+        
+    </script>
+    <title>Projeto ECMA Abstracao</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

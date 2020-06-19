@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+       //para tornar um atributo do objeto restrito, por conveção utiliza-se o 
+       //underline "_". qdo vemos os underline devemos utilizar os getters e setteres
+       //isso é feito pq no JS não existe a forma de como usar as opções private, static
+       class Tv{
+           constructor(){
+            this._realacaoCanais = Array(2, 5, 7, 10)
+            this._canalAtivo = 5
+            this._volume = 5
+           }
+
+           get canalAtivo(){
+               return this._canalAtivo
+           }
+           set canalAtivo(canal){
+                 if (this._realacaoCanais.indexOf(canal) !== -1){
+                     this._canalAtivo = canal
+                 }
+           }
+
+       }
+       let tv = new Tv()
+
+       tv.canalAtivo = 10
+       document.write(tv.canalAtivo)
+
+
+    </script>
+    <title>Projeto ECMA Abstracao</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

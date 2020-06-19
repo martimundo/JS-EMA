@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+
+        let arr = [10, 20, 30, 40]
+
+        let [a,...resto] = arr
+
+        document.write (a)
+        document.write(resto)
+
+        console.log(a)
+        console.log(resto)
+        
+        let obj1 = {
+            c: 50, d: 60, e: 70
+        }
+        let {c, ...z} = obj1
+        document.write(c)
+        document.write(z)
+
+        console.log(c)
+        console.log(z)
+        
+
+        
+
+    </script>
+    <title>Projeto ECMA Objetos Literais</title>
+</head>
+<body>
+    
+</body>
+</html>

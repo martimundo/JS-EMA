@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+        //Princios de herança em JS
+
+
+        class Animal{
+            constructor(tamanho, cor, peso){
+                this.tamanho = tamanho
+                this.cor = cor
+                this.peso = peso
+            }
+            dormir(){
+                console.log('Dormir')
+            }
+        }        
+        class Passaro extends Animal{
+            //passagem de parametros pelo constructor
+            constructor(bico, tamanho, cor, peso){   
+                super(tamanho,cor, peso)             
+                this.bico = bico
+                
+            }
+
+            voar(){
+                console.log('Voar')
+            }   
+            
+        }
+        //Nesta classe ele esta herdando da classe Passaro que herda da classe animal
+        //Esta ocorrendo o efeito cascata
+        class Papagaio extends Passaro{
+            constructor(sabeFalar, tamanho, cor, peso){
+                super("Médio",tamanho, cor, peso)
+                this.sabeFalar = sabeFalar
+            }
+            falar(){
+                console.log('Dá o Pé Loro')
+            }
+        }
+        let papagaio = new Papagaio(true, 10, 'Verde',50)
+        console.log(papagaio)
+
+        let papagaio2 = new Papagaio(false, 5, "Amarelo",15 )
+        console.log(papagaio2)
+
+        
+        
+    </script>
+    <title>Projeto ECMA Abstracao</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

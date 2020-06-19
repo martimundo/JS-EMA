@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+
+        //destructuring ->
+        // é um operador de desestruturação onde retira valores de dentro de uma strutura
+        let foo = ["one", "two", "three"];
+
+        let [one, two, three] = foo;
+        console.log(one, two); // "one"
+
+        let frutas = ['Laranja','Pera','Maça']
+        let [a, b, c] = frutas
+        console.log(a, c) 
+
+        let coisas = [['Laranja','Pera','Maça'], ['José','Maria']] 
+        //para extrair o valor de um array bidimensional   
+        let [,[,maria]] = coisas
+        console.log(maria)
+
+    </script>
+    <title>Projeto ECMA Objetos Literais</title>
+</head>
+<body>
+    
+</body>
+</html>

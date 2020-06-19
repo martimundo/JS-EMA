@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+    
+    //Todo objeto Literal é unico dentro da aplicação
+    let assinatura = {
+        idCliente: 1500,
+        descricao: "Acesso a Internet",
+        status(){
+            console.log('Serviço Ativo')
+        }
+    }
+    console.log(assinatura.descricao)
+
+    let y = assinatura
+
+    console.log(y.descricao)
+    
+    ///
+    y.descricao = 'Internet + Tv + Telefone Fixo'
+
+    console.log(assinatura.descricao)
+    console.log(y.descricao)
+
+    </script>
+    <title>Projeto ECMA Objetos Literais</title>
+</head>
+<body>
+    
+</body>
+</html>

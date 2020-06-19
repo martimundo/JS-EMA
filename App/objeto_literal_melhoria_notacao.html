@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+        
+        let nome = 'Marcos'
+        let idade = 38
+        let sexo = 'Masculino'
+        let profissao = 'Programador'
+
+        let obj = {
+            nome: nome,
+            idade: idade,
+            sexo: sexo,
+            profissao: profissao,
+            exibirResumo(){
+                console.log(`${this.nome}, tem ${this.idade} anos, é do sexo ${this.sexo} e trabalha como ${this.profissao}`)
+            }
+        }
+        console.log(obj)
+        obj.exibirResumo()
+
+        let obj2 = {
+            nome,
+            idade,
+            sexo,
+            profissao,
+            exibirResumo(){
+                console.log(`${this.nome}, tem ${this.idade} anos, é do sexo ${this.sexo} e trabalha como ${this.profissao}`)
+            }
+        }
+
+        console.log(obj2)
+        obj2.exibirResumo()
+    </script>
+    <title>Projeto ECMA Objetos Literais</title>
+</head>
+<body>
+    
+</body>
+</html>

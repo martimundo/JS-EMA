@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+        /*abstração - Reflexão
+        *Software para Marcenaria
+        *Objetos Cadeira e Sofá
+        */
+        //cadeira
+
+        //PROGRAMAR DE FORMA procedural
+        /*
+        let cadeiras = Array()
+
+        cadeiras[0]=Array()
+        cadeiras[0]['qtde_pernas'] = 4
+        cadeiras[0]['giratoria']= false
+        cadeiras[0]['cor'] = 'Azul'
+
+        cadeiras[1] = Array()
+        cadeiras[1]['qtde_pernas'] = 1
+        cadeiras[1]['giratoria'] = true
+        cadeiras[1]['cor'] = 'Vermelha'
+
+        
+        function girar_cadeira(indice){
+            if(cadeiras[indice]['giratoria'] == true) {
+                document.write("Cadeira Giratória")
+            }else{
+                document.write('Cadeira não Giratória')
+            }
+        }
+
+        function adicionarCardeira(qtde_pernas, giratoria, cor){
+            let cadeira = Array()
+
+            cadeira['qtde_pernas'] = qtde_pernas
+            cadeira['giratoria'] = giratoria
+            cadeira['cor'] = cor
+
+            cadeiras.push(cadeira)
+        }
+        adicionarCardeira(3, false, "Amarela")
+        console.log(cadeiras)
+        girar_cadeira(2)*/
+
+        //PROGRAMAR COM PILARES DA O.O.
+        class Cadeira{
+            //as variaveis com this são os atributos do objeto
+            //variaveis sem this fazem parte do escopo da função
+
+            constructor(qtde_pernas, giratoria, cor){
+                this.qtde_pernas = qtde_pernas
+                this.giratoria = giratoria
+                this.cor = cor
+            }
+            girarCadeira(){
+                if(this.giratoria === true){
+                    document.write("Cadeira Giratória")
+                }else{
+                    document.write('Cadeira não Giratória')
+                }
+            }
+        }
+        /*let cadeira = new Cadeira(4, false, "Laranja")
+        cadeira.girarCadeira()
+        console.log(cadeira)
+
+        let cadeira1 = new Cadeira(1, true, "Preta")
+        cadeira1.girarCadeira()
+        console.log(cadeira1)
+        */
+        //para adicionar mais cadeiras
+        let cadeiras =Array()
+        cadeiras.push(new Cadeira(4, false, "Laranja"))
+        cadeiras.push(new Cadeira(1, true, "Preta"))
+        console.log(cadeiras)
+
+        class Poltrona{
+
+            constructor(qtd_pernas,reclinavel, cor, qtd_acentos ){
+                this.qtd_pernas = qtd_pernas
+                this.reclinavel = reclinavel
+                this.cor = cor
+                this.qtd_acentos = qtd_acentos
+            }
+
+            reclinar(){
+                if(this.reclinavel === true){
+                    document.write("Essa Poltrona é Reclinavel")
+                }else{
+                    document.write("Essa Poltrona não é Reclinavel")
+                }
+            }
+        }        
+        let poltronas = new Poltrona(4,true,'preto',3)
+        poltronas.reclinar()
+        console.log(poltronas)
+
+        
+        
+    </script>
+    <title>Projeto ECMA Abstracao</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

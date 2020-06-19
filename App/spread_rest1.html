@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+
+       //Contexto spread utiliza-se a retiscencia 
+       
+       let tituloArtigo = 'Como utilizar o operador Spread'
+
+       console.log(tituloArtigo)
+       console.log(...tituloArtigo)
+       //podemos utulizar um array para armazenar os dados do spread
+       console.log([...tituloArtigo])
+
+        //Arrays
+       let listaCursos1 = ['NodeJS', 'PHP', 'Angular']
+       let listaCurso2 = ['Banco de Dados', 'CSharp', 'VueJs']
+       let cursosCompletos = ['Web Completo', 'Programador FullStack', ...listaCursos1, ...listaCurso2]
+       console.log(cursosCompletos)
+       //utlizando objetos
+       let pessoa = {nome: 'Joãozinho',idade: 18}
+       let clone = {endereco: 'Rua da Curva', ...pessoa}
+
+       console.log(clone)
+
+    </script>
+    <title>Projeto ECMA Objetos Literais</title>
+</head>
+<body>
+    
+</body>
+</html>
